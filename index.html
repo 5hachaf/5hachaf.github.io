@@ -13,8 +13,25 @@
     <main>
         <h1>configs</h1>
         <h3>.vimrc</h3>
-        <embed src="/.vimrc" width="100%" />
+        <code>
+            set number
+            colo slate
+            highlight LineNr ctermfg=darkgray
+            set tabstop=4 shiftwidth=4 expandtab
+        </code>
         <h3>Firefox</h3>
+        <code>
+            Extensions
+                Stylus, uBlock Origin, VisBug, Greasemonkey
+            
+            about:config
+                - browser.aboutConfig.showWarning = false
+                - ui.prefersReducedMotion = 1  
+                - browser.download.useDownloadDir = false
+                - privacy.donottrackheader.enabled = true
+                - dom.security.https_only_mode = true
+                - dom.security.https_only_mode_ever_enabled = true
+        </code>
         <embed src="/ff-conf" width="100%" />
     </main>
     <footer>
