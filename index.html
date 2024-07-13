@@ -2,24 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shachaf's Webpage</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/x-icon" href="https://maplestory.io/api/GMS/111/mob/1130100/render/move">
+	<link rel="stylesheet" href="https://axe-stump.github.io/style.css">
+    	<title>Shachaf's Webpage</title>
 </head>
 
 <body>
     <header>
-        <img src="https://static.wikia.nocookie.net/doom/images/4/48/Gibs_anim.gif" alt="DOOM Gibs Sprite">
+	<img src="https://maplestory.io/api/GMS/111/mob/1130100/render/move" alt="axe-stump-header" id="page-top">
+	<h1><strong>Shachaf's Webpage</strong></h1>
+	<p>Passionate about all things computing,
+	<br>I have a strong preference for using open source software whenever possible.</p>
+	<hr>
     </header>
     <main>
-        <h1>Configs</h1>
-        <h3>.vimrc</h3>
-        <iframe src="https://pastebin.com/embed_iframe/9GMNrciM" style="border:none;width:100%"></iframe>
-        <h3>Firefox</h3>
-        <iframe src="https://pastebin.com/embed_iframe/pBC4HZca" style="border:none;width:100%"></iframe>
+	<h1>Projects</h1>
+	<h3>Ta'arovet</h3>
+	<p>A sustainable, slow-fashion streetwear brand built with Shopify and designed from scratch. From concept to creation, I handle every aspect of the brand.
+	<ul>
+		<li><a href="http://taarovet.com" target="_blank">Website</a></li>
+		<li><a href="https://taarovet.com/products/trvt-jrb-tote-bag" target="_blank">TRVT-JRB</a></li>
+	</ul>
+	<h3>Doom Daggers</h3>
+	<p>Doom II mod inspired by the game 'Devil Daggers'.
+	<br>The Idea is to mimic the same intensive gameplay and ruthless difficulty of DD.</p>
+	<ul>
+		<li><a href="https://www.moddb.com/mods/doom-daggers/news/doom-daggers-devlog" target="_blank">Read the Devlog</a></li>
+		<li><a href="https://moddb.com/mods/doom-daggers" target="_blank">Download from ModDB</a></li>
+		<li><a href="https://github.com/axe-stump/Doom-Daggers" target="_blank">Check the project on GitHub</a></li>
+	</ul>
+	<h3>Bounce Em' All</h3>
+	<p>Custom level for Stick Fight: The Game,
+	<br>featuring the Bouncer and Spike Ball as the only weapon choices.</p>
+	<ul>
+		<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2357466830" target="_blank">Download from Steam Workshop</a></li>
+	</ul>
+	<hr>
+	<h1>Configs</h1>
+	<details>
+		<summary>Configurations for different software programs</summary>
+		<h3>Firefox</h3>
+		<details>
+			<summary>addons & config</summary>
+			<code>
+				about:addons
+				<br>- Stylus
+				<br>- uBlock Origin
+				<br>- VisBug
+				<br>- Greasemonkey
+				<br>
+				<br>about:config
+				<br>- browser.aboutConfig.showWarning = false
+				<br>- ui.prefersReducedMotion = 1
+				<br>- browser.download.useDownloadDir = false
+				<br>- privacy.donottrackheader.enabled = true
+				<br>- dom.security.https_only_mode = true
+				<br>- dom.security.https_only_mode_ever_enabled = true
+			</code>
+		</details>
+		<h3>Vim</h3>
+		<details>
+			<summary>config</summary>
+			<code>
+				set number
+				<br>colo slate
+				<br>highlight LineNr ctermfg=darkgray
+				<br>set tabstop=4 shiftwidth=4 expandtab
+			</code>
+		</details>
+	</details>
     </main>
     <footer>
-    <hr>
+  	<hr>
+	<a href="#page-top">Return to top</a> | <a href="https://github.com/axe-stump">GitHub</a>
+	<br><br>
+	<img src="https://maplestory.io/api/GMS/111/mob/1130100/render/die1" alt="axe-stump-end">
     </footer>
 </body>
 
