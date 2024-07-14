@@ -50,6 +50,10 @@ a:hover {
 	  color: white;
 }
 
+details {
+  background-color: #ff006624;
+}
+
 img {
 	display: block;
 	margin: auto;
