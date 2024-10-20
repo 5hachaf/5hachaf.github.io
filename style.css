@@ -39,20 +39,20 @@ h1 {
 }
 
 a:link {
-	  color: deeppink;
+	  color: #ff0066;
 }
 
 a:visited {
-	  color: hotpink;
+	  color: #ff69b4;
 }
 
 a:hover {
-	  color: white;
+	  color: #ffffff;
 }
 
 details {
-	color: #7fc300;
-	background-color: #270705;
+	color: #b1b1be;
+	background-color: #1b1e00;
 }
 
 img {
