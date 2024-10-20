@@ -51,7 +51,8 @@ a:hover {
 }
 
 details {
-  background-color: #ff006624;
+	color: #7fc300;
+	background-color: #270705;
 }
 
 img {
