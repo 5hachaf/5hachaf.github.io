@@ -33,7 +33,7 @@ hr, ul {
 	margin-bottom: 2em;
 }
 
-h1 {
+h1, h2 {
 	color: white;
 	text-transform: uppercase;
 }
