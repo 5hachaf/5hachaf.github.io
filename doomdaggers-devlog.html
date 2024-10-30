@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://maplestory.io/api/GMS/111/mob/1130100/render/move">
+    <link rel="stylesheet" href="https://axe-stump.github.io/style.css">
+    <title>Doom Daggers Devlog / Shachaf's Webpage</title>
+  </head>
+  <body>
+    <header>
+      <a href="https://axe-stump.github.io/">
+        <img src="https://maplestory.io/api/GMS/111/mob/1130100/render/move" alt="Axe Stump, a sprite from MapleStory, used as header image" id="page-top">
+      </a>
+      <h1>Doom Daggers Devlog</h1>
+      <small>Jul 8th, 2020</small>
+      <p>Doom II mod inspired by the game 'Devil Daggers'. <br>The Idea is to mimic the same intensive gameplay and ruthless difficulty of the original game (which will be refered as DD in this document). </p>
+      <hr>
+    </header>
+    <main>
+      <p> The main objective is to recreate <a href="https://store.steampowered.com/app/422970/Devil_Daggers/" target="_blank">Devil Daggers</a> settings in the original Doom game - things like the small round arena, a strong weapon with two options to fire (projectiles and shotgun) and infinite spawn-set of enemies; <br>Yet from the beginning I knew it’s important to keep the original Doom experience, which means the monsters stay the same and the mod isn’t meant to be played with jumping, free mouselook or anything else that modern Doom ports use to change the gameplay. </p>
+      <h2>Basic Doom Settings</h2>
+      <p> Map and weapon aside, I had a few settings I needed to change in Doom to achieve the desired experience: </p>
+      <p> First I changed the player HP to one point so the player dies in one hit (as in DD), next I realised the player's ability to run needs to be disabled because in a rounded open arena he could just run / strafe in circles and easily maneuver the enemies. </p>
+      <p> At some point I removed all the player classes so he will start without any weapon. <br>
+        <br>After some more play-testing I buffed the player base speed to 130%, then made one fixed difficulty which disabled monsters infighting and enabled ‘fast-monsters’ on Ultra-Violence (Nightmare difficulty would make random enemies spawn which ruined the idea of the spawn-set).
+      </p>
+      <h2>Monsters</h2>
+      <p> Comparing Devil Daggers enemies to Doom enemies: <br>
+        <br>While in DD enemies are either chasing the player or wandering in the arena (for spawning more enemies or taking the player’s gems), Doom enemies have more variety: <br>
+        <br>Enemies can chase the player, spawn more enemies and shoot the player in different ways (hitscans and projectiles) while also have a few different types of attack (melee, range).
+      </p>
+      <p> After play-testing with different monsters I understood that the behavior of hitscan enemies can’t go along with this mod because the player can’t really avoid the damage, that’s why I chose monsters that don’t have hitscan attacks (like Pinkies, Imps, Cacodemon, Barons, etc). </p>
+      <p> The last thing I changed was the teleport of the monsters - making it visible with the default effect. </p>
+      <h2>Map & spawn-set</h2>
+      <p> As mentioned, the map needs to be a small arena with a kind of a rounded shape, it also needs to be with certain height so if the player goes outside of the arena he falls to death. </p>
+      <p> The weapon will spawn in the middle of the map and the player will spawn next to it so he can see it first and pick it when he wants (taking the dagger will start the spawn-set). </p>
+      <p>For the spawn-set I created map spots around the arena and scripted them so the monsters will teleport to a random location at specific time. <br>
+        <br>Example to the map layout:
+      </p>
+      <img src="media/doomdaggers-map.jpg" alt="Top down view of the map">
+      <p>I decided that the first waves of the spawn-set will be in the map spots that are more close to the edge of the arena, giving the player a relatively easy start and then making the difficulty spike higher and more aggressive with different map spots.</p>
+      <h2>Weapon</h2>
+      <p>To explain my different choices in making the weapon I will break down both DD weapon and my modded weapon: <br>
+        <br>
+        <strong>Devil Daggers</strong>
+      <ul>
+        <li>Main fire - normal projectiles ; Alt fire - shotgun blast (uses projectiles)</li>
+        <li>Infinite ammo & no reloading</li>
+        <li>Can be upgraded with gems that drop from enemies</li>
+        <li>from lv.3 upgrade the player can shoot‘homing daggers’ which are daggers that follow the enemies (using the gems the player collected).</li>
+        <li>Projectiles can bounce from the floor (but it’s not used often / very effective)</li>
+      </ul>
+      <strong>Doom Daggers</strong>
+      <ul>
+        <li>Main fire: normal projectiles ; Alt fire - auto shotgun (hitscan)</li>
+        <li>Infinite ammo & no reloading-Can’t be upgraded</li>
+        <li>No gems dropping from enemies (also no ‘homing daggers’)</li>
+        <li>No projectile bounce</li>
+      </ul>
+      </p>
+      <p>We can understand that my weapon is way more simplified than the original and that is because I didn’t find any reason for creating a weapon upgrade system or homing daggers - Doom aiming mechanics are easier than DD and there’s no small specific targets that require things like auto targeting projectiles.</p>
+      <p>Although someone already created a weapon that mimics DD weapon very well with a shotgun that uses projectiles and projectiles that can bounce (see <a href="https://www.moddb.com/mods/daggerhell" target="_blank">DaggerHell</a>) - I found it too powerful and unbalanced in a small arena. </p>
+      <p>After a lot of trial and error I decided to use the default Plasma rifle projectiles for the main fire because it’s familiar to players and keeps the ‘vanilla experience’. <br>For the alternative fire I used a hitscan ‘auto shotgun’ with a big spread so it won’t be effective in long ranges of the arena. </p>
+      <h2>Graphics</h2>
+      <p>It was important to me that the custom sprites would fit the Doom theme, so I used similar resolutions and the same color palette of the game.</p>
+      <p>I think the result I made is decent but hope to improve the projectile sprite in the future and maybe create better animation to the hand / weapon (or find someone who's more experienced in this subject).</p>
+      <h2>Sound</h2>
+      <p>I used <a href="https://www.drpetter.se/project_sfxr.html" target="_blank">SFXR</a> to generate custom sounds for the weapon and modified them to be similar to DD weapon. <br>
+        <br>For the soundtrack I bought a few of Andrey Sitkov music kits and chose what seemed right for the mod.
+      </p>
+      <h2>Gameplay, bug & feedback</h2>
+      <p>The final weapon felt right, there was use for both the main fire and the alternative fire and a good example for that will be the Cacodemon - spamming him with normal projectiles will prevent him to shoot yet the shotgun will kill him faster in the right range, making the player combine those to stay alive and clear the arena before the next spawn.</p>
+      <p>In game, a timer was necessary because in DD it’s what helps the player to understand the spawn-set better. <br>
+        <br> I found that the timer is starting at the beginning of the level and not when the player picks up the weapon, the timer script was attached to the weapon and was supposed to execute when the player picks up the weapon.
+      </p>
+      <p> The solution was to create another timer and subtract his value from the original timer. <br>
+        <br>It seems that the mod got good feedback in the first few weeks and later got no exposure and feedback at all - most of the suggestions was to improve the overall graphics, some suggested to use the DaggerHell weapon.
+      </p>
+      <h2>Links</h2>
+      <a href="https://moddb.com/mods/doom-daggers" target="_blank">Download the mod fron ModDB</a>
+      <br>
+      <a href="https://github.com/axe-stump/Doom-Daggers" target="_blank">Check the project on GitHub</a>
+    </main>
+    <footer>
+      <hr>
+      <a href="#page-top">Return to top</a> | <a href="https://github.com/axe-stump" target="_blank">GitHub</a>
+      <br>
+      <code>
+        <q cite="Henry Spencer">Those who do not understand Unix are condemned to reinvent it, poorly</q>
+      </code>
+    </footer>
+  </body>
+</html>
