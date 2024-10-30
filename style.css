@@ -6,7 +6,7 @@ body {
 	animation: gradient 10s ease infinite;
 	height: 100vh;
 	font-family: "Rubik", sans-serif;
-  	font-style: normal;
+	font-style: normal;
 	max-width: 660px;
 	margin: auto;
 	padding: 1em;
@@ -17,9 +17,11 @@ body {
 	0% {
 		background-position: 0% 50%;
 	}
+
 	50% {
 		background-position: 100% 50%;
 	}
+
 	100% {
 		background-position: 0% 50%;
 	}
@@ -30,38 +32,45 @@ footer {
 	padding-bottom: 1em;
 }
 
-hr, ul {
+hr,
+ul {
 	margin-bottom: 2em;
 }
 
-h1, h2 {
+h1,
+h2 {
 	color: white;
 	text-transform: uppercase;
 }
 
 a:link {
-	  color: #ff0066;
+	color: #ff6347;
 }
 
 a:visited {
-	  color: #ff69b4;
+	color: #fa8072;
 }
 
-a:hover {
-	  color: #ffffff;
+a:hover,
+a:focus {
+	text-decoration: none;
+	color: #b11031;
+	background-color: #fffafa;
 }
 
-details {
-	color: #b1b1be;
-	background-color: #111111;
-}
 
 img {
 	display: block;
 	margin: auto;
 }
 
+
 .project {
-	padding-left: 9px;
-	border-left: solid 3px #ccc;
+	padding-left: 6px;
+	border-left: solid 6px #ffa500;
+}
+
+.solution {
+	padding-left: 6px;
+	border-left: solid 6px #FF4500;
 }
