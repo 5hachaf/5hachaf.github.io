@@ -51,6 +51,12 @@ h2 {
 	color: white;
 }
 
+
+img {
+	display: block;
+	margin: auto;
+}
+
 a:link {
 	color: #ff6347;
 }
