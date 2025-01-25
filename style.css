@@ -72,8 +72,8 @@ a:visited {
 a:hover,
 a:focus {
 	text-decoration: none;
-	color: #b11031;
-	background-color: #fffafa;
+	color: #fffafa;
+	background-color: #b11031;
 }
 
 .project {
