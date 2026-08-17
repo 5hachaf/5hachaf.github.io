@@ -8,60 +8,40 @@
     <title>Shachaf's Webpage</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
       <a href="https://5hachaf.github.io/">
-        <img src="https://maplestory.io/api/GMS/111/mob/1130100/render/move" alt="Axe Stump, a character from the MapleStory video game, used as header image" id="page-top">
+        <img src="https://maplestory.io/api/GMS/111/mob/1130100/render/move" alt="Shachaf's Webpage — home" id="page-top" width="87" height="82">
       </a>
       <h1>Shachaf's Webpage</h1>
       <p>I am passionate about all things computing, especially UX design, web accessibility, game design, and development. I also have a strong preference for using open-source software whenever possible.</p>
       <hr>
     </header>
-    <main>
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Ta'arovet</h3>
-        <p>A sustainable, slow-fashion streetwear brand website designed from scratch. <br>From concept to creation, I handle every aspect of the brand.
-        <p>Built with Shopify</p>
-        <ul role="list">
-          <li>
-            <a href="http://taarovet.com" target="_blank">Visit Ta'arovet website</a>
-          </li>
-        </ul>
-      </div>
-      <div class="project">
-        <h3>Doom Daggers</h3>
-        <p>Doom II mod inspired by the game 'Devil Daggers'. <br>The Idea is to mimic the same intensive gameplay and difficulty of the original game. </p>
-        <p>Built with Action Code Script, GZDoom & SLADE</p>
-        <ul role="list">
-          <li>
-            <a href="https://5hachaf.github.io/doomdaggers-devlog.html">Read the Devlog</a>
-          </li>
-          <li>
-            <a href="https://moddb.com/mods/doom-daggers" target="_blank">Download from ModDB</a>
-          </li>
-          <li>
-            <a href="https://github.com/5hachaf/Doom-Daggers" target="_blank">Check the project on GitHub</a>
-          </li>
-        </ul>
-      </div>
-      <div class="project">
-        <h3>Bounce Em' All</h3>
-        <p>Custom level for Stick Fight: The Game, <br>featuring the Bouncer and Spike Ball as the only weapon choices. </p>
-        <p>Built with the game's level editor</p>
-        <ul role="list">
-          <li>
-            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2357466830" target="_blank">Download from Steam Workshop</a>
-          </li>
-        </ul>
-      </div>
+    <main id="main-content">
+      <ul class="card-deck" role="list">
+        <li>
+          <a class="card" href="https://5hachaf.github.io/webdev.html">
+            <span class="card-corner card-corner-top" aria-hidden="true">/*</span>
+            <h2>Web Development</h2>
+            <p>Browser extensions and websites — from an open source WhatsApp Web enhancer to a slow-fashion brand built from scratch.</p>
+            <span class="card-corner card-corner-bottom" aria-hidden="true">*/</span>
+          </a>
+        </li>
+        <li>
+          <a class="card" href="https://5hachaf.github.io/gamedesign.html">
+            <span class="card-corner card-corner-top" id="spade" aria-hidden="true">&#9824;</span>
+            <h2>Game Design</h2>
+            <p>Mods and custom levels — a Devil Daggers–inspired Doom II mod and a bouncy Stick Fight: The Game level.</p>
+            <span class="card-corner card-corner-bottom" id="spade" aria-hidden="true">&#9824;</span>
+          </a>
+        </li>
+      </ul>
     </main>
     <footer>
       <hr>
-      <a href="#page-top">Return to top</a> | <a href="https://github.com/5hachaf" target="_blank">GitHub</a>
+      <a href="https://5hachaf.github.io/accessibility.html">Accessibility</a> | <a href="https://github.com/5hachaf" target="_blank" rel="noopener noreferrer">GitHub <span class="visually-hidden">(opens in a new tab)</span></a>
       <br>
-      <code>
-        <q cite="Henry Spencer">Those who do not understand Unix are condemned to reinvent it, poorly</q>
-      </code>
+      <p><code><q>Those who do not understand Unix are condemned to reinvent it, poorly</q> — Henry Spencer</code></p>
     </footer>
   </body>
 </html>
