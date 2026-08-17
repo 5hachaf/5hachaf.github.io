@@ -2,30 +2,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 body {
-	background: linear-gradient(90deg, #010710, #08080c);
-	background-size: 400% 400%;
-	animation: gradient 10s ease infinite;
-	height: 100vh;
+	background-color: #08080c;
+	min-height: 100vh;
 	font-family: "Rubik", sans-serif;
 	font-style: normal;
-	max-width: 660px;
+	line-height: 1.5;
+	max-width: 720px;
 	margin: auto;
 	padding: 1em;
 	color: #ccc;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	background-color: #430b18;
+	color: #fffafa;
+	padding: 0.5em 1em;
+	z-index: 100;
+}
 
-	50% {
-		background-position: 100% 50%;
-	}
+.skip-link:focus {
+	left: 0;
+}
 
-	100% {
-		background-position: 0% 50%;
-	}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
 
 footer {
@@ -39,26 +50,33 @@ ul {
 }
 
 h1 {
-        font-size: 3.6em;
+	font-size: 3.6em;
 	margin-bottom: -0.1em;
 }
 
 h1,
 h2 {
 	font-family: "Merriweather", serif;
-  	font-optical-sizing: auto;
-  	font-style: normal;
+	font-optical-sizing: auto;
+	font-style: normal;
 	text-transform: uppercase;
 	color: white;
 }
 
 ul {
-	list-style: square	
+	list-style: square;
 }
 
 img {
 	display: block;
 	margin: auto;
+	max-width: 100%; /* images never overflow on zoom / small viewports (1.4.10) */
+	height: auto;
+}
+
+.flip-x {
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
 }
 
 a:link {
@@ -73,7 +91,12 @@ a:hover,
 a:focus {
 	text-decoration: none;
 	color: #fffafa;
-	background-color: #b11031;
+	background-color: #430b18;
+}
+
+a:focus-visible {
+	outline: 3px solid #ffa500;
+	outline-offset: 2px;
 }
 
 .project {
@@ -81,8 +104,86 @@ a:focus {
 	border-left: solid 6px #ffa500;
 }
 
+/* ---------- Homepage "game cards" ---------- */
+
+.card-deck {
+	list-style: none; /* role="list" on the ul keeps list semantics in Safari/VoiceOver */
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 1.5em;
+}
+
+.card {
+	position: relative;
+	display: block;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 3em 1.75em;
+	border: solid 2px #ffa500;
+	border-radius: 12px;
+	background-color: rgba(255, 255, 255, 0.03);
+	text-decoration: none;
+	text-align: center;
+}
+
+.card:link,
+.card:visited {
+	color: #ccc;
+}
+
+.card h2 {
+	margin: 0 0 0.4em;
+	font-size: 1.5em;
+}
+
+.card p {
+	margin: 0;
+}
+
+.card:hover,
+.card:focus {
+	background-color: #430b18;
+	border-color: #fffafa;
+	color: #fffafa;
+}
+
+.card-corner {
+	position: absolute;
+	font-family: monospace;
+	font-size: 1.6em;
+	line-height: 1;
+	color: #ffa500;
+}
+
+.card-corner-top {
+	top: 0.5em;
+	left: 0.6em;
+}
+
+.card-corner-bottom {
+	bottom: 0.5em;
+	right: 0.6em;
+}
+
+#spade {
+	font-size: 2.2em;
+	margin: -0.3rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.card {
+		transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+	}
+
+	.card:hover,
+	.card:focus {
+		transform: translateY(-4px);
+	}
+}
+
 #map-img {
 	max-width: 100%;
-  	height: auto;
-  	display: block;
+	height: auto;
+	display: block;
 }
