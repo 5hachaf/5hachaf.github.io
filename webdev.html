@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://5hachaf.github.io/theme.js"></script>
     <link rel="icon" type="image/x-icon" href="https://maplestory.io/api/GMS/111/mob/1130100/render/move">
     <link rel="stylesheet" href="https://5hachaf.github.io/style.css">
     <title>5hachaf / Web Development</title>
@@ -10,26 +11,40 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" title="Dark mode">
+        <span class="visually-hidden">Dark mode</span>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
       <a href="https://5hachaf.github.io/">
         <img src="https://maplestory.io/api/GMS/111/mob/1130100/render/move" alt="Shachaf's Webpage — home" id="page-top" width="87" height="82">
       </a>
       <h1>Web Development</h1>
-      <p>Browser extensions and websites I've built.</p>
+      <p>My first real dive into web UI was designing an hourly server rental platform for CS:GO matches. Since then, the scope has expanded, but the goal remains the same: building clean, functional systems that solve real problems.</p>
       <hr>
     </header>
     <main id="main-content">
       <div class="project">
-        <h2>WhatsApp Web Advanced</h2>
-        <p>An open-source extension that enhances WhatsApp Web with features like message scheduling, CSV bulk messaging, direct messaging to unsaved numbers, and a privacy blur mode.</p>
+        <h2>VisWCAG</h2>
+        <p>Local-first WCAG 2.2 accessibility scanner with annotated visual snapshots, single-page and full website crawling reports, CLI support, and offline HTML exports.</p>
         <ul role="list">
           <li>
-            <a href="https://addons.mozilla.org/en-GB/firefox/addon/wa-web-advanced/">Add to Firefox</a>
+            <a href="https://github.com/5hachaf/viswcag" target="_blank" rel="noopener noreferrer">Source Code & Documentation on GitHub</a>
+          </li>
+        </ul>
+      </div>
+      <div class="project">
+        <h2>WhatsApp Web Advanced</h2>
+        <p>A browser extension that enhances WhatsApp Web with features like message scheduling, CSV bulk messaging, direct messaging to unsaved numbers, and a privacy blur mode.</p>
+        <ul role="list">
+          <li>
+            <a href="https://addons.mozilla.org/en-GB/firefox/addon/wa-web-advanced/" target="_blank" rel="noopener noreferrer">Add to Firefox</a>
           </li>
           <li>
-            <a href="https://chromewebstore.google.com/detail/whatsapp-web-advanced/kodopdpchcmmkdbncpnpbcebfkihoabb">Add to Chrome & Chromium Browsers</a>
+            <a href="https://chromewebstore.google.com/detail/whatsapp-web-advanced/kodopdpchcmmkdbncpnpbcebfkihoabb" target="_blank" rel="noopener noreferrer">Add to Chrome & Chromium Browsers</a>
           </li>
           <li>
-            <a href="https://github.com/5hachaf/WhatsApp-Web-Advanced">Source Code on GitHub</a>
+            <a href="https://github.com/5hachaf/whatsapp-web-advanced" target="_blank" rel="noopener noreferrer">Source Code on GitHub</a>
           </li>
         </ul>
       </div>
@@ -46,9 +61,8 @@
     </main>
     <footer>
       <hr>
-      <a href="https://5hachaf.github.io/">Return to homepage</a> | <a href="https://5hachaf.github.io/accessibility.html">Accessibility</a> | <a href="https://github.com/5hachaf" target="_blank" rel="noopener noreferrer">GitHub <span class="visually-hidden">(opens in a new tab)</span></a>
-      <br>
-      <p><code><q>Those who do not understand Unix are condemned to reinvent it, poorly</q> — Henry Spencer</code></p>
+      <p><code><q>People's awareness of tracking, surveillance, and censorship may have increased, but so has the prevalence of these hindrances to internet freedom</q> - Tor Project</code></p>
+      <a href="https://5hachaf.github.io/">Return to homepage</a> | <a href="https://5hachaf.github.io/accessibility.html">Accessibility</a> | <a href="https://github.com/5hachaf" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden">(opens in a new tab)</span></a> | <a href="https://ko-fi.com/5hachaf"target="_blank" rel="noopener noreferrer">Buy me a coffee<span class="visually-hidden">(opens in a new tab)</span></a>
     </footer>
   </body>
 </html>

@@ -3,26 +3,29 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://5hachaf.github.io/theme.js"></script>
     <link rel="icon" type="image/x-icon" href="https://maplestory.io/api/GMS/111/mob/1130100/render/move">
     <link rel="stylesheet" href="https://5hachaf.github.io/style.css">
     <title>5hachaf / Doom Daggers Devlog</title>
   </head>
   <body>
-    <!-- WCAG 2.4.1 (Bypass Blocks) -->
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" title="Dark mode">
+        <span class="visually-hidden">Dark mode</span>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
       <a href="https://5hachaf.github.io/">
-        <!-- WCAG 2.4.4: alt describes the link destination, not the decorative image -->
-        <img src="https://maplestory.io/api/GMS/111/mob/1130100/render/move" alt="Shachaf's Webpage — home" id="page-top" width="87" height="82">
+        <img src="https://maplestory.io/api/GMS/111/mob/1130100/render/move" alt="Shachaf's Webpage - home" id="page-top" width="87" height="82">
       </a>
       <h1>Doom Daggers Devlog</h1>
-      <!-- Machine-readable date (helps AT and search; more semantic than <small>) -->
       <p><small><time datetime="2020-07-08">Jul 8th, 2020</time></small></p>
       <p>Doom II mod inspired by the game 'Devil Daggers'. <br>The idea is to mimic the same intensive gameplay and ruthless difficulty of the original game (which will be referred to as DD in this document).</p>
       <hr>
     </header>
     <main id="main-content">
-      <p>The main objective is to recreate <a href="https://store.steampowered.com/app/422970/Devil_Daggers/" target="_blank" rel="noopener noreferrer">Devil Daggers <span class="visually-hidden">(opens in a new tab)</span></a> settings in the original Doom game — things like the small round arena, a strong weapon with two options to fire (projectiles and shotgun) and infinite spawn-set of enemies.</p>
+      <p>The main objective is to recreate <a href="https://store.steampowered.com/app/422970/Devil_Daggers/" target="_blank" rel="noopener noreferrer">Devil Daggers<span class="visually-hidden">(opens in a new tab)</span></a> settings in the original Doom game - things like the small round arena, a strong weapon with two options to fire (projectiles and shotgun) and infinite spawn-set of enemies.</p>
       <p>Yet from the beginning I knew it's important to keep the original Doom experience, which means the monsters stay the same and the mod isn't meant to be played with jumping, free mouselook or anything else that modern Doom ports use to change the gameplay.</p>
       <h2>Basic Doom Settings</h2>
       <p>Map and weapon aside, I had a few settings I needed to change in Doom to achieve the desired experience:</p>
@@ -34,22 +37,19 @@
       <p>While in DD enemies are either chasing the player or wandering in the arena (for spawning more enemies or taking the player's gems), Doom enemies have more variety:</p>
       <p>Enemies can chase the player, spawn more enemies and shoot the player in different ways (hitscans and projectiles) while also have a few different types of attack (melee, range).</p>
       <p>After play-testing with different monsters I understood that the behavior of hitscan enemies can't go along with this mod because the player can't really avoid the damage, that's why I chose monsters that don't have hitscan attacks (like Pinkies, Imps, Cacodemon, Barons, etc).</p>
-      <p>The last thing I changed was the teleport of the monsters — making it visible with the default effect.</p>
+      <p>The last thing I changed was the teleport of the monsters - making it visible with the default effect.</p>
       <h2>Map &amp; Spawn-set</h2>
       <p>As mentioned, the map needs to be a small arena with a kind of a rounded shape, it also needs to be with certain height so if the player goes outside of the arena he falls to death.</p>
       <p>The weapon will spawn in the middle of the map and the player will spawn next to it so he can see it first and pick it when he wants (taking the dagger will start the spawn-set).</p>
       <p>For the spawn-set I created map spots around the arena and scripted them so the monsters will teleport to a random location at specific time.</p>
       <p>Example of the map layout:</p>
-      <!-- WCAG 1.1.1: alt expanded to convey what the image actually shows -->
-      <img src="media/doomdaggers-map.jpg" alt="Top-down editor view of the round arena map, with monster teleport spots placed in a ring around its edge and the weapon spawn in the center" id="map-img">
+      <img src="media/doomdaggers-map.jpg" alt="Top-down arena layout with a weapon, player spawn, enemy teleports, and instant death border." id="map-img">
       <p>I decided that the first waves of the spawn-set will be in the map spots that are more close to the edge of the arena, giving the player a relatively easy start and then making the difficulty spike higher and more aggressive with different map spots.</p>
       <h2>Weapon</h2>
       <p>To explain my different choices in making the weapon I will break down both DD weapon and my modded weapon:</p>
-      <!-- WCAG 1.3.1 / valid parsing: <ul> can't live inside <p>. The two comparison
-           blocks are now h3 sub-sections with their own lists. -->
       <h3>Devil Daggers</h3>
       <ul role="list">
-        <li>Main fire — normal projectiles; Alt fire — shotgun blast (uses projectiles)</li>
+        <li>Main fire - normal projectiles; Alt fire - shotgun blast (uses projectiles)</li>
         <li>Infinite ammo &amp; no reloading</li>
         <li>Can be upgraded with gems that drop from enemies</li>
         <li>From lv.3 upgrade the player can shoot 'homing daggers' which are daggers that follow the enemies (using the gems the player collected).</li>
@@ -57,14 +57,14 @@
       </ul>
       <h3>Doom Daggers</h3>
       <ul role="list">
-        <li>Main fire — normal projectiles; Alt fire — auto shotgun (hitscan)</li>
+        <li>Main fire - normal projectiles; Alt fire - auto shotgun (hitscan)</li>
         <li>Infinite ammo &amp; no reloading</li>
         <li>Can't be upgraded</li>
         <li>No gems dropping from enemies (also no 'homing daggers')</li>
         <li>No projectile bounce</li>
       </ul>
-      <p>We can understand that my weapon is way more simplified than the original and that is because I didn't find any reason for creating a weapon upgrade system or homing daggers — Doom aiming mechanics are easier than DD and there's no small specific targets that require things like auto targeting projectiles.</p>
-      <p>Although someone already created a weapon that mimics DD weapon very well with a shotgun that uses projectiles and projectiles that can bounce (see <a href="https://www.moddb.com/mods/daggerhell" target="_blank" rel="noopener noreferrer">DaggerHell <span class="visually-hidden">(opens in a new tab)</span></a>) — I found it too powerful and unbalanced in a small arena.</p>
+      <p>We can understand that my weapon is way more simplified than the original and that is because I didn't find any reason for creating a weapon upgrade system or homing daggers - Doom aiming mechanics are easier than DD and there's no small specific targets that require things like auto targeting projectiles.</p>
+      <p>Although someone already created a weapon that mimics DD weapon very well with a shotgun that uses projectiles and projectiles that can bounce (see <a href="https://www.moddb.com/mods/daggerhell" target="_blank" rel="noopener noreferrer">DaggerHell<span class="visually-hidden">(opens in a new tab)</span></a>) - I found it too powerful and unbalanced in a small arena.</p>
       <p>After a lot of trial and error I decided to use the default Plasma rifle projectiles for the main fire because it's familiar to players and keeps the 'vanilla experience'. <br>For the alternative fire I used a hitscan 'auto shotgun' with a big spread so it won't be effective in long ranges of the arena.</p>
       <h2>Graphics</h2>
       <p>It was important to me that the custom sprites would fit the Doom theme, so I used similar resolutions and the same color palette of the game.</p>
@@ -73,11 +73,11 @@
       <p>I used <a href="https://www.drpetter.se/project_sfxr.html" target="_blank" rel="noopener noreferrer">SFXR <span class="visually-hidden">(opens in a new tab)</span></a> to generate custom sounds for the weapon and modified them to be similar to DD weapon.</p>
       <p>For the soundtrack I bought a few of Andrey Sitkov music kits and chose what seemed right for the mod.</p>
       <h2>Gameplay, Bugs &amp; Feedback</h2>
-      <p>The final weapon felt right, there was use for both the main fire and the alternative fire and a good example for that will be the Cacodemon — spamming him with normal projectiles will prevent him to shoot yet the shotgun will kill him faster in the right range, making the player combine those to stay alive and clear the arena before the next spawn.</p>
+      <p>The final weapon felt right, there was use for both the main fire and the alternative fire and a good example for that will be the Cacodemon - spamming him with normal projectiles will prevent him to shoot yet the shotgun will kill him faster in the right range, making the player combine those to stay alive and clear the arena before the next spawn.</p>
       <p>In game, a timer was necessary because in DD it's what helps the player to understand the spawn-set better.</p>
       <p>I found that the timer is starting at the beginning of the level and not when the player picks up the weapon, the timer script was attached to the weapon and was supposed to execute when the player picks up the weapon.</p>
       <p>The solution was to create another timer and subtract his value from the original timer.</p>
-      <p>It seems that the mod got good feedback in the first few weeks and later got no exposure and feedback at all — most of the suggestions was to improve the overall graphics, some suggested to use the DaggerHell weapon.</p>
+      <p>It seems that the mod got good feedback in the first few weeks and later got no exposure and feedback at all - most of the suggestions was to improve the overall graphics, some suggested to use the DaggerHell weapon.</p>
       <h2>Links</h2>
       <!-- WCAG 1.3.1: a group of related links is a list, not bare anchors separated by <br> -->
       <ul role="list">
@@ -88,9 +88,8 @@
     </main>
     <footer>
       <hr>
-      <a href="#page-top">Return to top</a> | <a href="https://5hachaf.github.io/">Return to homepage</a> | <a href="https://5hachaf.github.io/accessibility.html">Accessibility</a> | <a href="https://github.com/5hachaf" target="_blank" rel="noopener noreferrer">GitHub <span class="visually-hidden">(opens in a new tab)</span></a>
-      <br>
-      <p><code><q>Those who do not understand Unix are condemned to reinvent it, poorly</q> — Henry Spencer</code></p>
+      <p><code><q>The idea of making Doom easily modifiable was primarily backed by Carmack, a well-known supporter of copyleft and the hacker ideal of people sharing and building upon each other's work, and by John Romero, who had hacked games in his youth and wanted to allow other gamers to do the same</q> - Wikipedia</code></p>
+      <a href="#page-top">Return to top</a> | <a href="https://5hachaf.github.io/">Return to homepage</a> | <a href="https://5hachaf.github.io/accessibility.html">Accessibility</a> | <a href="https://github.com/5hachaf" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden">(opens in a new tab)</span></a> | <a href="https://ko-fi.com/5hachaf"target="_blank" rel="noopener noreferrer">Buy me a coffee<span class="visually-hidden">(opens in a new tab)</span></a>
     </footer>
   </body>
 </html>

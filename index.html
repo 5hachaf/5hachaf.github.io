@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://5hachaf.github.io/theme.js"></script>
     <link rel="icon" type="image/x-icon" href="https://maplestory.io/api/GMS/111/mob/1130100/render/move">
     <link rel="stylesheet" href="https://5hachaf.github.io/style.css">
     <title>5hachaf / Web & Games</title>
@@ -10,6 +11,11 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" title="Dark mode">
+        <span class="visually-hidden">Dark mode</span>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
       <a href="https://5hachaf.github.io/">
         <img src="https://maplestory.io/api/GMS/111/mob/1130100/render/move" alt="Shachaf's Webpage — home" id="page-top" width="87" height="82" class="flip-x">
       </a>
@@ -23,25 +29,24 @@
           <a class="card" href="https://5hachaf.github.io/webdev.html">
             <span class="card-corner card-corner-top" aria-hidden="true">/*</span>
             <h2>Web Development</h2>
-            <p>Browser extensions and websites — from an open source WhatsApp Web enhancer to a slow-fashion brand built from scratch.</p>
+            <p>Crafting accessibility tools, browser extensions, and launching end-to-end platforms.</p>
             <span class="card-corner card-corner-bottom" aria-hidden="true">*/</span>
           </a>
         </li>
         <li>
           <a class="card" href="https://5hachaf.github.io/gamedesign.html">
-            <span class="card-corner card-corner-top" id="spade" aria-hidden="true">&#9824;</span>
+            <span class="card-corner card-corner-top" class="spade" aria-hidden="true">&#9824;</span>
             <h2>Game Design</h2>
-            <p>Mods and custom levels — a Devil Daggers–inspired Doom II mod and a bouncy Stick Fight: The Game level.</p>
-            <span class="card-corner card-corner-bottom" id="spade" aria-hidden="true">&#9824;</span>
+            <p>Building custom maps, tweaking core mechanics, and designing intensive gameplay.</p>
+            <span class="card-corner card-corner-bottom" class="spade" aria-hidden="true">&#9824;</span>
           </a>
         </li>
       </ul>
     </main>
     <footer>
       <hr>
-      <a href="https://5hachaf.github.io/accessibility.html">Accessibility</a> | <a href="https://github.com/5hachaf" target="_blank" rel="noopener noreferrer">GitHub <span class="visually-hidden">(opens in a new tab)</span></a>
-      <br>
-      <p><code><q>Those who do not understand Unix are condemned to reinvent it, poorly</q> — Henry Spencer</code></p>
+      <p><code><q>Those who do not understand Unix are condemned to reinvent it, poorly</q> - Henry Spencer</code></p>
+      <a href="https://5hachaf.github.io/accessibility.html">Accessibility</a> | <a href="https://github.com/5hachaf" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden">(opens in a new tab)</span></a> | <a href="https://ko-fi.com/5hachaf"target="_blank" rel="noopener noreferrer">Buy me a coffee<span class="visually-hidden">(opens in a new tab)</span></a>
     </footer>
   </body>
 </html>
