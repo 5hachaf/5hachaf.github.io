@@ -3,18 +3,18 @@
 
 :root {
   color-scheme: light;
-  --emerald: #32949f;
-  --ink: #102a43;          /* primary text */
-  --ink-2: #344456;        /* secondary text */
-  --ink-3: #425164;        /* tertiary text */
+  --mainc: #c1004c;
+  --ink: #43102a;          /* primary text */
+  --ink-2: #563444;        /* secondary text */
+  --ink-3: #644251;        /* tertiary text */
   --paper: #fafafa;        /* page background */
   --surface: #ffffff;      /* panels, cards, inputs */
   --wash: #f3f5f8;         /* subtle tint, hover */
   --wash-2: #e9edf2;       /* stronger hover */
   --table: #e4e8ed;        /* light-table behind the snapshot */
-  --rule: #d5dbe2;         /* dividers */
-  --rule-strong: #76879a;  /* control borders */
-  --focus: #1747a6;        /* links and focus rings */
+  --rule: #e2d5db;         /* dividers */
+  --rule-strong: #9a7687;  /* control borders */
+  --focus: #ad0045;        /* links and focus rings */
   --focus-rgb: 23 71 166;
   --shadow-rgb: 16 42 67;
   --primary-bg: #102a43;
@@ -26,7 +26,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-	--emerald: #00a6b4;
+	--mainc: #00a6b4;
     --ink: #ededee;
     --ink-2: #c9cbcf;
     --ink-3: #b3b6bb;
@@ -46,7 +46,7 @@
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-    --emerald: #00a6b4;
+    --mainc: #00a6b4;
     --ink: #ededee;
     --ink-2: #c9cbcf;
     --ink-3: #b3b6bb;
@@ -140,7 +140,7 @@ img {
 .project {
 	padding-left: 6px;
 	border-left: solid 6px;
-	border-color: var(--emerald);
+	border-color: var(--mainc);
 }
 
 .card-deck {
@@ -159,7 +159,7 @@ img {
 	padding: 3em 1.75em;
 	border: solid 2px;
 	border-radius: 12px;
-	border-color: var(--emerald);
+	border-color: var(--mainc);
 	text-decoration: none;
 	text-align: center;
 }
@@ -189,7 +189,7 @@ img {
 	font-family: monospace;
 	font-size: 1.6em;
 	line-height: 1;
-	color: var(--emerald);
+	color: var(--mainc);
 }
 
 .card-corner-top {
