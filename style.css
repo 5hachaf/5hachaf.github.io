@@ -9,8 +9,8 @@
   --ink-3: #644251;        /* tertiary text */
   --paper: #fafafa;        /* page background */
   --surface: #ffffff;      /* panels, cards, inputs */
-  --wash: #f3f5f8;         /* subtle tint, hover */
-  --wash-2: #e9edf2;       /* stronger hover */
+  --wash: #f8f3f5;         /* subtle tint, hover */
+  --wash-2: #f2e9ed;       /* stronger hover */
   --table: #e4e8ed;        /* light-table behind the snapshot */
   --rule: #e2d5db;         /* dividers */
   --rule-strong: #9a7687;  /* control borders */
