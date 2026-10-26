@@ -7,6 +7,7 @@
   --ink: #43102a;          /* primary text */
   --ink-2: #563444;        /* secondary text */
   --ink-3: #644251;        /* tertiary text */
+  --tselect: #f39ab9;		/* selection text */
   --paper: #fafafa;        /* page background */
   --surface: #ffffff;      /* panels, cards, inputs */
   --wash: #f8f3f5;         /* subtle tint, hover */
@@ -15,8 +16,6 @@
   --rule: #e2d5db;         /* dividers */
   --rule-strong: #9a7687;  /* control borders */
   --focus: #ad0045;        /* links and focus rings */
-  --focus-rgb: 23 71 166;
-  --shadow-rgb: 16 42 67;
   --primary-bg: #43102a;
   --primary-fg: #ffffff;
   --radius: 10px;
@@ -27,9 +26,10 @@
   :root:not([data-theme="light"]) {
     color-scheme: dark;
 	--mainc: #00a6b4;
-    --ink: #ededee;
+    --ink: #fafafa;
     --ink-2: #c9cbcf;
     --ink-3: #b3b6bb;
+ 	--tselect: #005f66;
     --paper: #0d0d0e;
     --surface: #1e1f21;
     --wash: #26282a;
@@ -38,8 +38,6 @@
     --rule: #383a3e;
     --rule-strong: #73787f;
     --focus: #00cadb;
-    --focus-rgb: 166 200 255;
-    --shadow-rgb: 0 0 0;
     --primary-bg: #ededee;
     --primary-fg: #161718;
   }
@@ -47,9 +45,10 @@
 :root[data-theme="dark"] {
   color-scheme: dark;
     --mainc: #00a6b4;
-    --ink: #ededee;
+    --ink: #fafafa;
     --ink-2: #c9cbcf;
     --ink-3: #b3b6bb;
+	--tselect: #005f66;
     --paper: #0d0d0e;
     --surface: #1e1f21;
     --wash: #26282a;
@@ -58,8 +57,6 @@
     --rule: #383a3e;
     --rule-strong: #73787f;
     --focus: #00cadb;
-    --focus-rgb: 166 200 255;
-    --shadow-rgb: 0 0 0;
     --primary-bg: #ededee;
     --primary-fg: #161718;
 }
@@ -74,6 +71,11 @@ body {
 	max-width: 720px;
 	margin: auto;
 	padding: 1em;
+}
+
+::selection{
+	color: var(--ink);
+	background-color: var(--tselect);
 }
 
 a { color: var(--focus); text-underline-offset: 2px; }
